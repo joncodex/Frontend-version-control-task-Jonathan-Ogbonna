@@ -16,10 +16,41 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             background: #0f172a;
             color: #f8fafc;
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #3b82f6;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #f8fafc;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
@@ -49,8 +80,19 @@
     </style>
 </head>
 <body>
-<h1>Welcome</h1>
-<p>A simple place to start.</p>
-<a href="#" class="btn">Get Started</a>
+<header>
+    <div class="logo">fiptask</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Welcome</h1>
+    <p>A simple place to start.</p>
+    <a href="#" class="btn">Get Started</a>
+</main>
 </body>
 </html>
