@@ -21,28 +21,92 @@
         }
 
         header {
-            padding: 1.5rem 2rem;
+            padding: 1rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #334155;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
         }
 
         .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: #3b82f6;
+            letter-spacing: -0.02em;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
         }
 
         nav a {
             color: #94a3b8;
             text-decoration: none;
-            margin-left: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.2s;
+            position: relative;
         }
 
         nav a:hover {
             color: #f8fafc;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.2s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-secondary {
+            padding: 0.5rem 1.25rem;
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.25rem;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
         }
 
         main {
@@ -51,31 +115,35 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding-top: 5rem;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            font-weight: 600;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         p {
             color: #94a3b8;
-            font-size: 1.125rem;
+            font-size: 1.25rem;
         }
 
         .btn {
-            margin-top: 2rem;
-            padding: 0.75rem 1.5rem;
+            margin-top: 2.5rem;
+            padding: 0.875rem 2rem;
             background: #3b82f6;
             color: white;
             text-decoration: none;
             border-radius: 0.5rem;
-            transition: background 0.2s;
+            font-weight: 500;
+            transition: all 0.2s;
         }
 
         .btn:hover {
             background: #2563eb;
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -83,10 +151,15 @@
 <header>
     <div class="logo">fiptask</div>
     <nav>
-        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
     </nav>
+    <div class="header-actions">
+        <a href="#" class="btn-secondary">Log in</a>
+        <a href="#" class="btn-primary">Sign up</a>
+    </div>
 </header>
 
 <main>
