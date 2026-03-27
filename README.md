@@ -29,3 +29,6 @@ git fetch origin --prune
 git status
 git branch -r
 git branch -d <name-of-branch-to-delete>
+
+Lessons Learned in the Process:
+Git is a powerful tool for version control that makes collaboration in projects much easier. It offers amazing features that allow for effective damage control and helps ensure that one team member does not negatively impact the entire project. The more I learn how to use Git, the more efficient and confident I become as a developer.
