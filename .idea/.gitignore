@@ -16,3 +16,10 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+# Ignore all env files
+.env*
+
+# Except local template
+!.env.local
+!.env.example
